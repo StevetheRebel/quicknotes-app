@@ -25,16 +25,29 @@ My Notes is a responsive note manager built with HTML, CSS and JavaScript. Users
 
 No build step or package installation is required for the application.
 
-## Manual checks
+## Manual testing results
 
-1. Submit an empty note. Confirm a validation error appears.
-2. Submit more than 200 characters. Confirm rejection.
-3. Add a note in each category. Check the card colours.
-4. Search for a word, then a category.
-5. Refresh the page. Confirm saved notes return.
-6. Delete notes. Confirm the count updates.
-7. Refresh again. Confirm deleted notes stay removed.
-8. Resize the window below 600px. Check the stacked form layout.
+| Test | Expected result | Result |
+| --- | --- | --- |
+| Submit an empty note | Show an error without adding a note | Passed |
+| Submit only spaces | Show an error without adding a note | Passed |
+| Submit exactly 200 characters | Add the note successfully | Passed |
+| Submit more than 200 characters | Show an error without adding a note | Passed |
+| Add notes in all three categories | Show the correct category label and colour | Passed |
+| Search by note text | Display matching notes | Passed |
+| Search by category | Display notes from the matching category | Passed |
+| Search using uppercase letters | Match notes regardless of letter case | Passed |
+| Search for unmatched text | Show an empty list and zero matches | Passed |
+| Clear the search field | Display all notes again | Passed |
+| Refresh after adding notes | Restore saved notes | Passed |
+| Delete a note | Remove the selected note and update the count | Passed |
+| Refresh after deleting a note | Keep the deleted note removed | Passed |
+| Delete all notes | Display "No notes yet." | Passed |
+| Add one note | Display "1 note." | Passed |
+| Add multiple notes | Display the correct total | Passed |
+| Resize below 600px | Stack the form controls and note cards | Passed |
+| Hover over buttons | Display a visible hover style | Passed |
+| Navigate using Tab | Display visible focus on controls | Passed |
 
 ## What I learned
 
