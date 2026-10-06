@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>My Notes</h1>
+    <p>Keep your tasks and ideas organised.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="add-heading">
+      <h2 id="add-heading">Add a note</h2>
+
+      <form id="note-form" novalidate>
+        <div class="field note-field">
+          <label for="note-input">Note</label>
+          <input
+            type="text"
+            id="note-input"
+            placeholder="Write up to 200 characters"
+            aria-describedby="error-message"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="note-category">Category</label>
+          <select id="note-category">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+          </select>
+        </div>
+
+        <button type="submit">Add note</button>
+      </form>
+
+      <p id="error-message" role="alert"></p>
+    </section>
+
+    <section aria-labelledby="notes-heading">
+      <h2 id="notes-heading">Your notes</h2>
+
+      <label for="search-input">Search notes</label>
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search by text or category"
+      >
+
+      <p id="note-count" role="status">No notes yet.</p>
+      <ul id="notes-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>My Notes. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
